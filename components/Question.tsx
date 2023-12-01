@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export type Problem = {
     id: number
@@ -18,6 +18,11 @@ const Question = ({ id, firstNumber, secondNumber, operation, updateQuestions }:
     console.log(id, firstNumber, secondNumber, operation)
 
     const [result, setResult] = useState<number>()
+    const ref = useRef<HTMLInputElement>(null)
+
+    useEffect(() => {
+ref.current?.focus()
+    },[])
 
     return (
         <>
@@ -32,7 +37,7 @@ const Question = ({ id, firstNumber, secondNumber, operation, updateQuestions }:
                 <h1 className='text-3xl font-bold'>{secondNumber}</h1>
             </div>
             <div className='flex justify-center items-center mt-5'>
-                <input type='number' className='border-2 w-1/3 border-slate-300 p-2 text-center '
+                <input ref={ref} type='number' className='border-2 w-1/3 border-slate-300 p-2 text-center '
                     onChange={e => setResult(Number(e.target.value))}
                     onBlur={e => {
                         updateQuestions(id, result as number)
