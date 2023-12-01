@@ -36,7 +36,7 @@ const MathManager = () => {
 
     return <>
         {!showResult && questions &&
-            <div className='bg-slate-800 h-full flex flex-col items-center gap-5'>
+            <div className='bg-slate-800 h-full flex flex-col justify-start items-center gap-3'>
                 {questions.map(x => <>
                         {currentIndex === x.id &&
                             <Question

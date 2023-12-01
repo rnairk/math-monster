@@ -26,7 +26,7 @@ ref.current?.focus()
 
     return (
         <>
-        <label className='text-3xl text-white  mt-10'>Question #: {id+1}</label>
+        <label className='text-3xl text-white mb-5'>Question #: {id+1}</label>
         <div className='flex flex-col bg-slate-900 p-5 rounded-lg'>
             <div className='flex justify-center items-center'>
                 <label className=' text-2xl text-slate-900 font-bold'>+</label>
