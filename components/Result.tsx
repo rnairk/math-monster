@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Result = ({ results }: { results: Problem[] }) => {
 
     return (
-        <div className='flex flex-col justify-around  items-center h-full  bg-slate-800'>
+        <div className='flex flex-col justify-start items-center h-full gap-5  bg-slate-800'>
              <label className='text-3xl text-white mt-2 '>Results</label>
             <div className=' flex justify-center items-center text-white '>
                 <table className='text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
